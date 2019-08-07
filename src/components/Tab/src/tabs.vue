@@ -86,9 +86,12 @@ export default  {
         display:flex;
         border-bottom:2px solid #dedede;
         box-sizing:border-box;
-        align-items:center;
-        justify-content:center;
         position:relative;
+    }
+    .v-tab-nav{
+        height:60px;
+        line-height:60px;
+        cursor:pointer;
     }
     .v-tab-nav-active{
         color:#409EFF;
