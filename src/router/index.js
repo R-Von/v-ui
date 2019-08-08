@@ -16,7 +16,16 @@ const router = new VueRouter({
             name:"tab",
             component:()=>import('@/views/Tab')
         },
-
+        {
+            path:"/button",
+            name:"button",
+            component:()=>import('@/views/Button')
+        },
+        {
+            path:"/alert",
+            name:"alert",
+            component:()=>import('@/views/Alert')
+        }
     ]
 })
 

@@ -3,7 +3,9 @@
         <h2>V-UI</h2>
 
         <ul>
-            <li><router-link to='/tab'>Tab切换</router-link></li>
+            <li><router-link to='/alert'>Alert</router-link></li>
+            <li><router-link to='/button'>Button</router-link></li>
+            <li><router-link to='/tab'>Tab</router-link></li>
             <li>...</li>
             <li>...</li>
             <li>...</li>
