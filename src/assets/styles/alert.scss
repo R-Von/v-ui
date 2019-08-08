@@ -1,0 +1,134 @@
+@charset "UTF-8";
+@import "./common/var";
+@import "./mixins/mixins";
+
+@include b(alert) {
+  width: 100%;
+  padding: $--alert-padding;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: $--alert-border-radius;
+  position: relative;
+  background-color: $--color-white;
+  overflow: hidden;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  transition: opacity .2s;
+
+  @include when(light) {
+    .v-alert-closebtn {
+      color: $--color-text-placeholder;
+    }
+  }
+
+  @include when(dark) {
+    .v-alert-closebtn {
+      color: $--color-white;
+    }
+    .v-alert-description {
+      color: $--color-white;
+    }
+  }
+
+  @include when(center) {
+    justify-content: center;
+  }
+
+  @include m(success) {
+    &.is-light {
+      background-color: $--alert-success-color;
+      color: $--color-success;
+
+      .v-alert-description {
+        color: $--color-success;
+      }
+    }
+
+    &.is-dark {
+      background-color: $--color-success;
+      color: $--color-white;
+    }
+  }
+
+  @include m(info) {
+    &.is-light {
+      background-color: $--alert-info-color;
+      color: $--color-info;
+    }
+
+    &.is-dark {
+      background-color: $--color-info;
+      color: $--color-white;
+    }
+
+    .v-alert-description {
+      color: $--color-info;
+    }
+  }
+
+  @include m(warning) {
+    &.is-light {
+      background-color: $--alert-warning-color;
+      color: $--color-warning;
+
+      .v-alert-description {
+        color: $--color-warning;
+      }
+    }
+
+    &.is-dark {
+      background-color: $--color-warning;
+      color: $--color-white;
+    }
+  }
+
+  @include m(error) {
+    &.is-light {
+      background-color: $--alert-danger-color;
+      color: $--color-danger;
+
+      .v-alert-description {
+        color: $--color-danger;
+      }
+    }
+
+    &.is-dark {
+      background-color: $--color-danger;
+      color: $--color-white;
+    }
+  }
+
+  @include m(content) {
+    display: table-cell;
+    padding: 0 8px;
+  }
+
+  @include m(title) {
+    font-size: $--alert-title-font-size;
+    line-height: 18px;
+    @include when(bold) {
+      font-weight: bold;
+    }
+  }
+
+  & .v-alert-description {
+    font-size: $--alert-description-font-size;
+    margin: 5px 0 0 0;
+  }
+
+  @include m(closebtn) {
+    font-size: $--alert-close-font-size;
+    opacity: 1;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    cursor: pointer;
+
+    @include when(customed) {
+      font-style: normal;
+      font-size: $--alert-close-customed-font-size;
+      top: 9px;
+    }
+  }
+}
