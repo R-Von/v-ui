@@ -132,3 +132,8 @@
     }
   }
 }
+
+.v-alert-fade-enter,
+.v-alert-fade-leave-active {
+  opacity: 0;
+}

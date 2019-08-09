@@ -92,6 +92,7 @@ export default  {
         height:60px;
         line-height:60px;
         cursor:pointer;
+        text-align:center;
     }
     .v-tab-nav-active{
         color:#409EFF;

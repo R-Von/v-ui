@@ -24,4 +24,10 @@ export default {
         margin:50px auto 0;
         text-align:left;
     }
+    ul{
+        margin-top:40px;
+        li{
+            list-style:inside;
+        }
+    }
 </style>
