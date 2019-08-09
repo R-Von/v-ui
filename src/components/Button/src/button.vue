@@ -1,6 +1,7 @@
 <template>
     <button 
         class="v-button"
+        @click="handleClick"
         :class="[
             type?`v-button-${type}`:'',
             size?`v-button-${size}`:'',
@@ -32,6 +33,11 @@ export default {
         disabled:{
             type:Boolean,
             default:false
+        }
+    },
+    methods:{
+        handleClick(e){
+            this.$emit('click', e);
         }
     }
 }

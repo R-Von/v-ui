@@ -25,6 +25,11 @@ const router = new VueRouter({
             path:"/alert",
             name:"alert",
             component:()=>import('@/views/Alert')
+        },
+        {
+            path:"/message",
+            name:"message",
+            component:()=>import('@/views/Message')
         }
     ]
 })

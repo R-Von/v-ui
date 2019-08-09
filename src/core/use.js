@@ -1,4 +1,7 @@
 import Vue from 'vue'
+//compoennts use
+import './components_use'
+//normal use
 import Alert from '@/components/Alert'
 import Button from '@/components/Button'
 
