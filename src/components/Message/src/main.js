@@ -6,6 +6,7 @@ let messageConstructor = Vue.extend(Main)
 // 使用基础 Vue 构造器，创建一个“子类”。
 let instance;
 let instances = [];
+let seed = 1
 
 const Message = function(option) {
 
@@ -15,13 +16,20 @@ const Message = function(option) {
         }
     }
 
+    let userOnCLose = option.onClose
+    let id = 'message_' + seed++
+
+    option.onClose = function(){
+        Message.close(id,userOnCLose)
+    }
+
     instance = new messageConstructor({
         data:option
     })
 
+    instance.id = id
 
     instance.$mount()   //mount 后 才有 $el
-
 
     document.body.appendChild(instance.$el)
 
@@ -39,5 +47,21 @@ const Message = function(option) {
 
     return instance
 }
+// console.log(Message.close);
+Message.close = function(id,userOnCLose){
+    // console.log('id',id)
+    // console.log('userOnCLose',userOnCLose)
+    let len = instances.length
+    for(let i = 0 ; i < len ; i++){
+        if(id===instances[i].id){
+            if(typeof userOnCLose === 'function'){
+                userOnCLose(instances[i])
+            }
+        }
+        instances.splice(i,1)
+        break
+    }
+}
+
 
 export default Message

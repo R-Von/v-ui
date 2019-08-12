@@ -12,10 +12,10 @@
         <div class="content-item">
             <v-button type="danger" @click="alert4">唤起Error</v-button>    
         </div>
-        <!-- <div class="content-item">
-            <v-button @click="alert5">唤起Message</v-button>    
-        </div>
         <div class="content-item">
+            <v-button @click="alert5">onClose</v-button>    
+        </div>
+        <!-- <div class="content-item">
             <v-button @click="alert6">唤起Message</v-button>    
         </div> -->
     </div>
@@ -42,6 +42,15 @@ export default {
             this.$message({
                 message:"这是一条消息提示",
                 type:"error"
+            })
+        },
+        alert5(){
+             this.$message({
+                message:"这是一条消息提示",
+                type:"success",
+                onClose:function(){
+                    alert('onclose')
+                }
             })
         }
     }

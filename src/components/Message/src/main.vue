@@ -1,4 +1,5 @@
 <template>
+ <transition name="v-message-fade">
     <div 
     :class="[
         'v-message',
@@ -17,6 +18,7 @@
         </slot>
         <i class="v-message-closeBtn" @click="close">关闭</i>
     </div>
+ </transition>
 </template>
 <script>
 
@@ -44,7 +46,6 @@ export default {
    watch:{
        closed(val){
            if(val){
-               console.log("watch")
                this.visible = false
            }
        }
