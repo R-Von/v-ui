@@ -15,9 +15,6 @@
         <div class="content-item">
             <v-button @click="alert5">onClose</v-button>    
         </div>
-        <!-- <div class="content-item">
-            <v-button @click="alert6">唤起Message</v-button>    
-        </div> -->
     </div>
 </template>
 <script>

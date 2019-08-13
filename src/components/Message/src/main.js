@@ -29,7 +29,7 @@ const Message = function(option) {
 
     instance.id = id
 
-    instance.$mount()   //mount 后 才有 $el
+    instance.$mount()  
 
     document.body.appendChild(instance.$el)
 
