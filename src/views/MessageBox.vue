@@ -11,7 +11,9 @@ export default {
         open(){
             this.$msgbox({
                 title:"消息",
-                message:"内容"
+                message:"内容",
+                showCancelButton:true,
+                showConfirmButton:true
             })
         }
     }
