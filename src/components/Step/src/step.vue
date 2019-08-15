@@ -79,8 +79,8 @@ export default {
             }else{
                 this.internalStatus = 'wait'
             }
-            console.log('calcProgress(status)')
-            console.log(val)
+            // console.log('calcProgress(status)')
+            // console.log(val)
             // this
             if(prevChild) prevChild.calcProgress(this.internalStatus)
         },
@@ -95,7 +95,6 @@ export default {
                 step = 0
                 style.transitionDelay = `${-150*this.index}ms`
             }
-
             style.borderWidth = step?'1px':'0'
             style.width = `${step}%`
             this.lineStyle = style
@@ -131,7 +130,7 @@ export default {
     },
     watch:{
         'index'(val){
-            console.log(val)
+            // console.log(val)
             this.$watch('$parent.active',this.updateStatus,{immediate:true})
         }
     }

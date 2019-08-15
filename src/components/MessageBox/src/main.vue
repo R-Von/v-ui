@@ -42,13 +42,13 @@ export default {
             }
         },
         doClose(){
-            console.log(this.visible)
+            // console.log(this.visible)
             if (!this.visible) return;
             this.visible = false;
         }
     },
     mounted(){
-        console.log(this)
+        // console.log(this)
     }
 }
 </script>
