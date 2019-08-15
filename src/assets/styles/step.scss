@@ -48,30 +48,30 @@
       position: relative;
       width: 100%;
   
-      // @include when(process) {
-      //   color: $--color-text-primary;
-      //   border-color: $--color-text-primary;
-      // }
+      @include when(process) {
+        color: $--color-text-primary;
+        border-color: $--color-text-primary;
+      }
   
-      // @include when(wait) {
-      //   color: $--color-text-placeholder;
-      //   border-color: $--color-text-placeholder;
-      // }
+      @include when(wait) {
+        color: $--color-text-placeholder;
+        border-color: $--color-text-placeholder;
+      }
   
-      // @include when(success) {
-      //   color: $--color-success;
-      //   border-color: $--color-success;
-      // }
+      @include when(success) {
+        color: $--color-success;
+        border-color: $--color-success;
+      }
   
-      // @include when(error) {
-      //   color: $--color-danger;
-      //   border-color: $--color-danger;
-      // }
+      @include when(error) {
+        color: $--color-danger;
+        border-color: $--color-danger;
+      }
   
-      // @include when(finish) {
-      //   color: $--color-primary;
-      //   border-color: $--color-primary;
-      // }
+      @include when(finish) {
+        color: $--color-primary;
+        border-color: $--color-primary;
+      }
     }
   
     @include m(text) {

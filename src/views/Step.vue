@@ -1,7 +1,7 @@
 <template>
     <div class="content">
         <div class="content-item">
-            <v-steps :active="0">
+            <v-steps :active="active">
                 <v-step 
                     title="步骤一" 
                     description="1111111111"
@@ -18,12 +18,28 @@
                 >
                 </v-step>
             </v-steps>
-        </div>        
+        </div>       
+        <div class="content-item"> 
+            <v-button @click="next">下一步</v-button>
+        </div>       
+        <div class="content-item"> 
+            {{active}}
+        </div>       
+
     </div>
 </template>
 <script>
 export default {
-    
+    data() {
+      return {
+        active: 0
+      };
+    },
+    methods:{
+        next(){
+            if (this.active++ > 2) this.active = 0;
+        }
+    }
 }
 </script>
 <style lang="scss">
