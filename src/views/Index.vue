@@ -8,6 +8,7 @@
             <li><router-link to='/message'>Message</router-link></li>
             <li><router-link to='/tab'>Tab</router-link></li>
             <li><router-link to='/message_box'>MessageBox</router-link></li>
+            <li><router-link to='/step'>Step</router-link></li>
             <li>...</li>
             <li>...</li>
             <li>...</li>

@@ -35,6 +35,11 @@ const router = new VueRouter({
             path:"/message_box",
             name:"message_box",
             component:()=>import('@/views/MessageBox')
+        },
+        {
+            path:"/step",
+            name:"step",
+            component:()=>import('@/views/Step')
         }
     ]
 })
