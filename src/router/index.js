@@ -40,6 +40,11 @@ const router = new VueRouter({
             path:"/step",
             name:"step",
             component:()=>import('@/views/Step')
+        },
+        {
+            path:"/toast",
+            name:"toast",
+            component:()=>import('@/views/Toast')
         }
     ]
 })
