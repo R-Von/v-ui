@@ -37,6 +37,7 @@ export default {
         text-align: center;
         line-height: 50px;
         font-size: 18px;
+        user-select: none;
     }
 
     .v-toast-fade-enter-active,.v-toast-fade-leave-active {
